@@ -1,0 +1,198 @@
+*{font-family:sans-serif;
+	text-align: center;
+}
+body{
+	background-color: #351f39;
+	margin: 0px;
+	margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    position: relative;
+    height: 26vh;
+}
+input{
+	background-color: #726a95;
+    color: #351f39;
+    font-weight: 800;
+    border: 1px #a0c1b8 solid;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+}
+#ganador{
+	position: relative;
+    top: -206em;;
+	width: 100%;
+}
+.botonGanador{
+    position: relative;
+    top: -44em;
+    width: 90%;
+     padding: 20px 20px;  
+    top: -17em;
+}
+.botonQuien{
+   position: relative;
+    width: 90%;
+    padding: 40px 20px 102px;
+    top: -27em;
+}
+#gana{
+        width: 90%;
+}
+#fin2{
+    padding: 20px 20px;
+    top: -39em;;
+}
+.visualizar{
+	display: block;
+	visibility: visible;
+}
+.oculto {
+	display: none;
+	visibility: hidden;
+}
+.vistaUno{
+	height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.vistaDos{
+	height: 50vh;
+    margin-left: 5%;
+    margin-right: 5%;
+        position: relative;
+    top: -20em;
+    align-content: space-between;
+}
+.cajaNombres{
+	padding-top: 15%;
+	padding-right: 15%;
+	padding-left: 15%;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cajaNombres>input{
+	margin-top: 5vh;
+}
+.btnElegido{
+	border : 1px solid;
+	background-color: #726a95!important;
+    color: #351f39;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 10px;	
+}
+#init{
+	padding-right: 30%;
+    padding-left: 30%;
+	border:none;
+	margin-top: 4vh;
+
+}
+.noElegido{
+	background-color: #351f39;
+    color: #726a95;
+    padding: 10px;
+    border: none;
+}
+.btnOperacion{
+	min-height: 10vh;
+    min-width: 15vw;
+    max-height: 10vh;
+    max-width: 15vw;
+    font-size: initial;
+}
+.etiquetas{
+	border : 1px solid;
+	background-color: #a0c1b8;
+    color: #351f39;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 10px;
+
+}
+.etiquetaModa{
+	border : 1px solid;
+	background-color: #a0c1b8;
+    color: #351f39;
+    border-radius: 3px;
+    padding: 3px;
+}
+.etiquetasPuntos{
+	    color: #a0c1b8;
+    font-size: xxx-large;
+}
+.dosAlMedio{
+	display: flex;
+	justify-content:center;
+    margin-top: 8vh;
+}
+.nombres{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+    margin-bottom: 10px;
+}
+.center{
+	display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+.centerFosforo{
+	display: flex;
+    flex-direction: column;
+  	justify-content: space-around;
+  	align-items: center;
+}
+.divFosforos{
+	display: flex;
+	justify-content:space-around;
+	background-color: #a0c1b8;
+	border-radius: 3px;
+}
+.centerFosforo > img{    
+	width: 7vh;
+    height: 10vw;
+    padding-top: 8px;
+    height: 25%;
+}
+.fosforos{    
+    margin-bottom: 8px;
+}
+#fosforos1{
+	width: 50%;
+  	border-right: 1px black solid;
+}
+#fosforos2{
+	width: 50%;
+    border-left: : 1px black solid;
+}
+#equipo1Mitad1{
+		height: 50%;
+	    border-bottom: 1px black solid;
+}
+#equipo2Mitad1{
+		height: 50%;
+	    border-bottom: 1px black solid;
+}
+.divPuntos{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 10px;
+}
+#copa{
+    top: -30em;
+    width: 80%;
+}
+/*media query */
+@media only screen and (max-width: 600px) {
+    #ganador {
+    top: -45em;
+}
+}
