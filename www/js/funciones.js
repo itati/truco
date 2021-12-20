@@ -109,7 +109,7 @@ function resetFosforos(){
 		html+='<div id="equipo2Mitad2" class="centerFosforo">'
 		}
 
-		html+='<img src="img/0.png" id="'+i+'">';
+		html+='<img src="www/img/0.png" id="'+i+'">';
 	}
 	html+='</div>';
 	$("#fosforos2").html(html);
@@ -128,7 +128,7 @@ function resetFosforos1(){
 		html+='</div>';	
 		html+='<div id="equipo1Mitad2" class="centerFosforo">'
 		}
-		html+='<img src="img/0.png" id="'+i+'">';
+		html+='<img src="www/img/0.png" id="'+i+'">';
 	}
 	html+='</div>';
 	$("#fosforos1").html(html);
@@ -147,7 +147,7 @@ function resetFosforos2(){
 		html+='</div>';	
 		html+='<div id="equipo2Mitad2" class="centerFosforo">'
 		}
-		html+='<img src="img/0.png" id="'+i+'">';
+		html+='<img src="www/img/0.png" id="'+i+'">';
 	}
 	html+='</div>';
 	$("#fosforos2").html(html);
@@ -169,7 +169,7 @@ function btnIniciar(){
 			//funcion dibujarPuntos segun la modalidad que sea llamada desde los botones de sumar y restar Empeza con 30
 function dibuja(donde, cuanto){
 	
-	$("#"+donde).attr('src',"img/"+cuanto+".png");
+	$("#"+donde).attr('src',"www/img/"+cuanto+".png");
 	
 }
 
@@ -209,9 +209,9 @@ function gana(q){
 	var quien;
 	if(q==s1){quien=$('#nombre1').val()}else{quien=$('#nombre2').val()}
 	$('#ganador').css({"display":"block"});
-	$('#ganador').append('<img id="gana" src="img/confeti.gif">');
+	$('#ganador').append('<img id="gana" src="www/img/confeti.gif">');
 	$('#ganador').append('<input type="text" readonly id="quien" class="botonQuien" value="¡Felicidades '+quien+'!">');
-	$('#ganador').append('<img id="copa" src="img/copa.png" class="botonGanador">');
+	$('#ganador').append('<img id="copa" src="www/img/copa.png" class="botonGanador">');
 	$('#ganador').append('<input type="button" id="fin2" class="botonGanador" value="Volver a Jugar">');
 
 	

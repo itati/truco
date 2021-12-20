@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Truco</title>
+	<link rel="shortcut icon" type="image/png" href="www/img/T.png">
+	<link rel="stylesheet" type="text/css" href="www/css/estilos.css">
+
+</head>
+<body>
+
+<div id="vista1" class="vistaUno">
+	<div class="cajaNombres">
+		<input type="text" id="nombre1" maxlength="9">
+		<input type="text" id="nombre2" maxlength="9">
+	</div>
+	<div class="dosAlMedio">
+		<input type="button" id="24" class="elegirM" value="a24">
+		<input type="button" id="30" class="elegirM" value="a30">
+	</div>
+	<div><input type="button" id="init" value="Iniciar"></div>
+</div>
+
+<div id="vista2" class="vistaDos">
+	<div class=nombres>
+		<div id="equipo1">
+				<input type="button" id="s1" value="+" class="btnOperacion">
+				<input type="button" id="ne1" class="etiquetas">
+		</div>
+		<div id="equipo2">
+				<input type="button" id="ne2" class="etiquetas">
+				<input type="button" id="s2" value="+" class="btnOperacion">
+		</div>
+	</div>
+	<div class="divFosforos">
+		<div id="fosforos1" class="fosforos">
+		</div>
+
+		<div id="fosforos2" class="fosforos">
+		</div>
+	</div>
+	<div class=divPuntos>
+		<input type="button" id="r1" value="-" class="btnOperacion">
+		<label id="p1" class="etiquetasPuntos">0</label>
+		<div class="center">
+			<label id="moda" class="etiquetaModa"></label>
+			<input type="button" id="fin" value="Fin">
+		</div>
+		<label id="p2" class="etiquetasPuntos">0</label>
+		<input type="button" id="r2" value="-" class="btnOperacion">
+	</div>
+</div>
+
+<div id="ganador"></div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="www/js/funciones.js" type="text/javascript"></script>	
+</body>
+</html>
