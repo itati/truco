@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 var modalidad=0;
 var puntaje1, puntaje2;
 var b=false;
@@ -20,9 +19,9 @@ function cargarInicial(){
 	$('#vista2').removeClass('visualizar').addClass('oculto');
 	$('#vista1').removeClass('oculto').addClass('visualizar');
 
-	resetFosforos();
-	//resetFosforos1();
-	//resetFosforos2();
+	//resetFosforos();
+	resetFosforos1();
+	resetFosforos2();
 }
 //----------------------------------------Botones
 $('.elegirM').on('click',function(){
@@ -36,6 +35,7 @@ $('#fin').on('click',function(){
 	cargarInicial();
 });
 //----------------------------------------Botones de sumar y restar
+
 				//boton sumar Equipo1
 $('#s1').on('click', function(){
 	
@@ -55,7 +55,7 @@ $('#r1').on('click', function(){
 		puntaje1-=1;
 		$('#p1').html(puntaje1);
 	}
-	resetFosforos();
+	resetFosforos1();
 	dibujarPuntos(this);
 });
 
@@ -77,7 +77,7 @@ $('#r2').on('click', function(){
 		puntaje2-=1;
 		$('#p2').html(puntaje2);
 	}
-	resetFosforos();
+	resetFosforos2();
 	dibujarPuntos(this);
 
 });
@@ -85,10 +85,11 @@ $('#r2').on('click', function(){
 //--------------------------------Funciones
 
 function resetFosforos(){
+
 	var html="";
 	
 	for(var i = 1 ; i <= 12 ; i++){  //i para el ID
-		//debugger;
+		debugger;
 		if(i==1){
 		  html+='<div id="equipo1Mitad1" class="centerFosforo">'
 		}				
@@ -99,6 +100,7 @@ function resetFosforos(){
 		if(i==7){
 		html+='</div>';	
 		$("#fosforos1").html(html);
+
 		html="";
 		html+='<div id="equipo2Mitad1" class="centerFosforo">'
 		}
@@ -114,15 +116,44 @@ function resetFosforos(){
 	
 }
 
-/*
 function resetFosforos1(){
-	$('#fosforos1').html('<div id="equipo1Mitad1" class="centerFosforo"><img src="img/0.png" id="1"><img src="img/0.png" id="2"><img src="img/0.png" id="3"></div><div id="equipo1Mitad2"  class="centerFosforo"><img src="img/0.png" id="4"><img src="img/0.png" id="5"><img src="img/0.png" id="6"></div>');
+	var html="";
+	
+	for(var i = 1 ; i <= 6 ; i++){  //i para el ID
+		//debugger;
+		if(i==1){
+		  html+='<div id="equipo1Mitad1" class="centerFosforo">'
+		}				
+		if(i==4){
+		html+='</div>';	
+		html+='<div id="equipo1Mitad2" class="centerFosforo">'
+		}
+		html+='<img src="img/0.png" id="'+i+'">';
+	}
+	html+='</div>';
+	$("#fosforos1").html(html);
+	
 }
 
 function resetFosforos2(){
-	$('#fosforos2').html('<div id="equipo2Mitad1" class="centerFosforo"><img src="img/0.png" id="7"><img src="img/0.png" id="8"><img src="img/0.png" id="9"></div><div id="equipo2Mitad2"  class="centerFosforo"><img src="img/0.png" id="10"><img src="img/0.png" id="11"><img src="img/0.png" id="12"></div>');
+	var html="";
+	
+	for(var i = 7 ; i <= 12 ; i++){  //i para el ID
+		//debugger;
+		if(i==7){
+		  html+='<div id="equipo2Mitad1" class="centerFosforo">'
+		}				
+		if(i==10){
+		html+='</div>';	
+		html+='<div id="equipo2Mitad2" class="centerFosforo">'
+		}
+		html+='<img src="img/0.png" id="'+i+'">';
+	}
+	html+='</div>';
+	$("#fosforos2").html(html);
+	
 }
-*/
+
 function btnIniciar(){
 				//tomar la modalidad
 				//setear etiquetas de nombres de equipo
@@ -179,7 +210,7 @@ function gana(q){
 	if(q==s1){quien=$('#nombre1').val()}else{quien=$('#nombre2').val()}
 	$('#ganador').css({"display":"block"});
 	$('#ganador').append('<img id="gana" src="img/confeti.gif">');
-	$('#ganador').append('<input type="text" readonly id="quien" class="botonQuien" value="Felicidades '+quien+'"!>');
+	$('#ganador').append('<input type="text" readonly id="quien" class="botonQuien" value="¡Felicidades '+quien+'!">');
 	$('#ganador').append('<img id="copa" src="img/copa.png" class="botonGanador">');
 	$('#ganador').append('<input type="button" id="fin2" class="botonGanador" value="Volver a Jugar">');
 
